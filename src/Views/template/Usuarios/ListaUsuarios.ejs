@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Usuarios</title>
+</head>
+<body>
+    <%- include('app') %>
+    <section>
+        <div class="container">
+            <form>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td>Nome</td>
+                            <td>Email</td>
+                            <td>Açoes</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% usuarios.forEach((usuario)=>{ %>
+                            <tr>
+                                <td><%= usuario.name %></td>
+                                <td><%= usuario.email %></td>
+                                <td><button type="submit"
+                                            formaction=<%= `/usuario/u/${usuario.id}` %>
+                                            formmethod="GET">Atualizar
+                                    </button>
+                                    <button type="submit"
+                                            formaction=<%= `/usuario/d/${usuario.id}` %>
+                                            formmethod="GET">deletar
+                                    </button>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </form>
+            <a class="btn btn-primary" aria-current="page" href="/usuario">Novo Usuario</a>
+        </div>
+    </section>
+    
+</body>
+</html>

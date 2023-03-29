@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Mensagens</title>
+</head>
+<body>
+    <%- include('app') %>
+    <section>
+        <div class="container">
+            <form action="/mensagem" method="post">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td>Nome</td>
+                            <td>Email</td>
+                            <td>Telefone</td>
+                            <td>Açoes</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% mensagens.forEach((mensagem)=>{ %>
+                        <tr>
+                            <td><%= mensagem.name %></td>
+                            <td><%= mensagem.email %></td>
+                            <td><%= mensagem.telefone %></td>
+                            <td>
+                                <button type="submit"
+                                        formaction=<%= `/mensagem/${mensagem.id}` %>  
+                                        formmethod="GET">Ler
+                                </button>
+                                <button type="submit"
+                                        formaction=<%= `/mensagem/d/${mensagem.id}` %>
+                                        formmethod="GET">deletar
+                                </button>
+                            </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </section>
+    
+</body>
+</html>

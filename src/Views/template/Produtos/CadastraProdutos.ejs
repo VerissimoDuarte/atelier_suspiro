@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Produtos</title>
+</head>
+<body>
+    <%- include('app') %>
+    <section>
+        <form action="/produto" method="post" enctype="multipart/form-data">
+            <div>
+                <p><%=  msg %></p>
+                <div>
+                    <input type="hidden" name="id" value="<%= produto.id %>">
+                </div>
+                <div>
+                    <label for="name">Nome: </label>
+                    <input type="text" name="name" id="name" value="<%= produto.name %>">
+                </div>
+                <div>
+                    <label for="preco">Preço: </label>
+                    <input type="text" name="preco" id="preco" value="<%= produto.preco %>">
+                </div>
+                <div>
+                    <label for="img">Imagem: </label>
+                    <input type="file" name="img" id="img" value="<%= produto.img %>">
+                </div>
+                <div>
+                    <label for="descricao">Descrição: </label>
+                    <textarea name="descricao" id="descricao" cols="30" rows="10">"<%= produto.descricao %>"</textarea>
+                </div>
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

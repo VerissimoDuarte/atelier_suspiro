@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Mensagem</title>
+</head>
+<body>
+    <%- include('app') %>
+    <section>
+        <form action="">
+            <div>
+                <p>Nome: <%= mensagens.name %></p>
+                <p>Email: <%= mensagens.email %></p>
+                <p>Telefone: <%= mensagens.telefone %></p>
+            </div>
+            <div>
+                <p><%= mensagens.mensagem %></p>
+            </div>
+            <button type="submit"
+                    formaction="/mensagem/list"
+                    formmethod="GET" > Retornar
+            </button>
+            <button type="submit"
+                    formaction=<%= `/mensagem/d/${mensagens.id}` %>
+                    formmethod="GET" >Deletar
+            </button>
+        </form>
+    </section>
+    
+</body>
+</html>

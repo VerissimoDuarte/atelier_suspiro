@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Produtos</title>
+</head>
+<body>
+    <%- include('app') %>
+    <section>
+        <div class="container">
+            <form>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td>Nome</td>
+                            <td>Preço</td>
+                            <td>Açoes</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% produtos.forEach(function(produto, i) { %>
+                        <tr>
+                            <td><%= produto.name %></td>
+                            <td><%= produto.preco %></td>
+                            <td>
+                                <button type="submit" 
+                                        formmethod="GET" 
+                                        formaction=<%= `/produto/u/${produto.id}` %>
+                                        >Atualizar</button>
+                                <button type="submit"
+                                        formmethod="GET" 
+                                        formaction=<%= `/produto/e/${produto.id}` %>
+                                        
+                                        >deletar</button>
+                            </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </form>
+            <a class="btn btn-primary" aria-current="page" href="/produto">Novo Produto</a>
+        </div>
+    </section>
+    
+</body>
+</html>
