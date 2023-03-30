@@ -9,30 +9,30 @@
 </head>
 <body>
     <%- include('app') %>
-    <section>
-        <form action="/produto" method="post" enctype="multipart/form-data">
+    <section class="m-4 d-grid ">
+        <form class="col-8" action="/produto" method="post" enctype="multipart/form-data">
             <div>
-                <p><%=  msg %></p>
+                <p class="alert"><%=  msg %></p>
                 <div>
                     <input type="hidden" name="id" value="<%= produto.id %>">
                 </div>
-                <div>
-                    <label for="name">Nome: </label>
-                    <input type="text" name="name" id="name" value="<%= produto.name %>">
+                <div class="mb-3 input-group">
+                    <label class="input-group-text" for="name">Nome: </label>
+                    <input class="form-control" type="text" name="name" id="name" value="<%= produto.name %>">
                 </div>
-                <div>
-                    <label for="preco">Preço: </label>
-                    <input type="text" name="preco" id="preco" value="<%= produto.preco %>">
+                <div class="mb-3 input-group">
+                    <label class="input-group-text" for="preco">Preço: </label>
+                    <input class="form-control" type="text" name="preco" id="preco" value="<%= produto.preco %>">
                 </div>
-                <div>
-                    <label for="img">Imagem: </label>
-                    <input type="file" name="img" id="img" value="<%= produto.img %>">
+                <div class="mb-3 input-group">
+                    <label class="input-group-text" for="img">Imagem: </label>
+                    <input class="form-control" type="file" name="img" id="img" value="<%= produto.img %>">
                 </div>
-                <div>
-                    <label for="descricao">Descrição: </label>
-                    <textarea name="descricao" id="descricao" cols="30" rows="10">"<%= produto.descricao %>"</textarea>
+                <div class="mb-3 input-group">
+                    <label class="input-group-text" for="descricao">Descrição: </label>
+                    <textarea class="form-control" name="descricao" id="descricao" cols="30" rows="10"><%= produto.descricao %></textarea>
                 </div>
-                <button type="submit">Cadastrar</button>
+                <button class="btn btn-primary" type="submit">Cadastrar</button>
             </div>
         </form>
     </section>

@@ -16,7 +16,9 @@ module.exports = {
                     return res.render('ListaProdutos', { produtos })
                 }
                 else{
-                    await Produto.create({ ...req.body , img: `image/${req.file?req.file.filename:'image/teste1.jpeg'}`})
+                    delete req.body.id
+                    req.body.img = `image/${req.file?req.file.filename:'image/teste1.jpeg'}`
+                    await Produto.create({ ...req.body })
                     msg = '* Cadastro Realizado Com Sucesso!'
                 }
             }

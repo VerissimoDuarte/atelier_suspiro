@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,36 +9,36 @@
 </head>
 <body>
     <%- include('app') %>
-    <section>
-        <form action="/contato" method="post">
-            <div>
+    <section class="m-4 d-grid " >
+        <form class="col-8" action="/contato" method="post">
+            <div >
                 <p><%= msg %></p>
             </div>
-            <div>
-                <label for="instagram">Instagram: </label>
-                <input type="text" name="instagram" id="instagram" value= "<%= contato.instagram %>">
+            <div class="mb-3 input-group">
+                <label class="input-group-text" for="instagram">Instagram: </label>
+                <input class="form-control" type="text" name="instagram" id="instagram" value= "<%= contato.instagram %>">
             </div>
-            <div>
-                <label for="facebook">Facebook: </label>
-                <input type="text" name="facebook" id="facebook" value= "<%= contato.facebook %>">
+            <div class="mb-3 input-group">
+                <label class="input-group-text" for="facebook">Facebook: </label>
+                <input class="form-control" type="text" name="facebook" id="facebook" value= "<%= contato.facebook %>">
             </div>
-            <div>
-                <label for="email">E-mail: </label>
-                <input type="text" name="email" id="email" value= "<%= contato.email %>">
+            <div class="mb-3 input-group"> 
+                <label class="input-group-text" for="email">E-mail: </label>
+                <input class="form-control" type="text" name="email" id="email" value= "<%= contato.email %>">
             </div>
-            <div>
-                <label for="telefone">Telefone: </label>
-                <input type="text" name="telefone" id="telefone" value= "<%= contato.telefone %>">
+            <div class="mb-3 input-group">
+                <label class="input-group-text" for="telefone">Telefone: </label>
+                <input class="form-control" type="text" name="telefone" id="telefone" value= "<%= contato.telefone %>">
             </div>
-            <div>
-                <label for="whatsapp">Whatsapp: </label>
-                <input type="text" name="whatsapp" id="whatsapp" value= "<%= contato.whatsapp %>">
+            <div class="mb-3 input-group">
+                <label class="input-group-text" for="whatsapp">Whatsapp: </label>
+                <input class="form-control" type="text" name="whatsapp" id="whatsapp" value= "<%= contato.whatsapp %>">
             </div>
-            <div>
-                <label for="endereco">Endereço: </label>
-                <input type="text" name="endereco" id="endereco" value="<%= contato.endereco %>">
+            <div class="mb-3 input-group">
+                <label class="input-group-text" for="endereco">Endereço: </label>
+                <input class="form-control" type="text" name="endereco" id="endereco" value="<%= contato.endereco %>">
             </div>
-            <button type="submit">Atualizar</button>
+            <button class="btn btn-primary" type="submit">Atualizar</button>
         </form>
     </section>
     

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +8,31 @@
     <title>Loja Suspiros</title>
 </head>
 <body>
-    <div>
-        <% produtos.forEach((produto) => {%>
-        <div class="card" style="width: 18rem;">
-            <img src=<%= produto.img %> class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title"><%= produto.name %></h5>
-              <p class="card-text"><%= produto.descricao %></p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+  <header>
+    <div class="navbar navbar-light bg-light navbar-expand-lg">
+      <div class="container-fluid">
+        <a href="/login" class="navbar-brand">Atelier</a>
+      </div>
+    </div>
+  </header>
+  <div class="container d-flex  flex-column">
+    <div class="align-self-center " >
+      <h1>Atelier do Suspiro</h1>
+      <p>Fabrica de Delicias</p>
+    </div>
+    <div class="container d-flex">
+      <% produtos.forEach((produto) => {%>
+        <div class="card m-4" style="width: 18rem;">
+          <img src=<%= produto.img %> class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= produto.name %></h5>
+            <p class="card-text"><%= produto.descricao %></p>
+            <p class="card-text">R$ <%= produto.preco %></p>
           </div>
-        <%})%>
-    </div>    
+        </div>
+      <%})%>
+    </div> 
+  </div>
+       
 </body>
 </html>

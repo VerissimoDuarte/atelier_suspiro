@@ -28,11 +28,11 @@
                             <td><%= mensagem.email %></td>
                             <td><%= mensagem.telefone %></td>
                             <td>
-                                <button type="submit"
+                                <button class="btn btn-success" type="submit"
                                         formaction=<%= `/mensagem/${mensagem.id}` %>  
                                         formmethod="GET">Ler
                                 </button>
-                                <button type="submit"
+                                <button class="btn btn-danger" type="submit"
                                         formaction=<%= `/mensagem/d/${mensagem.id}` %>
                                         formmethod="GET">deletar
                                 </button>

@@ -27,11 +27,13 @@
                                 <td><%= usuario.email %></td>
                                 <td><button type="submit"
                                             formaction=<%= `/usuario/u/${usuario.id}` %>
-                                            formmethod="GET">Atualizar
+                                            formmethod="GET"
+                                            class="btn btn-success">Atualizar
                                     </button>
                                     <button type="submit"
                                             formaction=<%= `/usuario/d/${usuario.id}` %>
-                                            formmethod="GET">deletar
+                                            formmethod="GET"
+                                            class="btn btn-danger">deletar
                                     </button>
                                 </td>
                             </tr>

@@ -9,29 +9,29 @@
 </head>
 <body>
     <%- include('app') %>
-    <section>
-        <form action="/usuario" method="post">
+    <section class="m-4 d-grid ">
+        <form class="col-8" action="/usuario" method="post">
             <div>
                 <input type="hidden" name="id" value="<%= usuario.id %>">
-                <div>
-                    <label for="name">Nome: </label>
-                    <input type="text" name="name" id="name" value="<%= usuario.name %>">
+                <div class="mb-3 input-group">
+                    <label class="input-group-text" for="name">Nome: </label>
+                    <input class="form-control" type="text" name="name" id="name" value="<%= usuario.name %>">
                 </div>
-                <div>
-                    <label for="email">Email: </label>
-                    <input type="email" name="email" id="email" value="<%= usuario.email %>">
+                <div class="mb-3 input-group">
+                    <label class="input-group-text" for="email">Email: </label>
+                    <input class="form-control" type="email" name="email" id="email" value="<%= usuario.email %>">
                 </div>
-                <div>
-                    <label for="password">Senha: </label>
-                    <input type="password" name="password" id="password">
+                <div class="mb-3 input-group">
+                    <label class="input-group-text" for="password">Senha: </label>
+                    <input class="form-control" type="password" name="password" id="password">
                 </div>
                 <% if(usuario.id){ %>
-                    <div>
-                        <label for="newPassword">Nova Senha: </label>
-                        <input type="password" name="newPassword" id="newpassword">
+                    <div class="mb-3 input-group">
+                        <label class="input-group-text" for="newPassword">Nova Senha: </label>
+                        <input class="form-control" type="password" name="newPassword" id="newpassword">
                     </div>
                 <% } %>
-                <button type="submit">Cadastrar</button>
+                <button class="btn btn-primary" type="submit">Cadastrar</button>
             </div>
         </form>
     </section>

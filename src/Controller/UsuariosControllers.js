@@ -7,8 +7,10 @@ module.exports = {
             res.render('CadastraUsuario', {usuario: { ...req.body } , msg})
         }
         else if(req.method === 'POST'){
+            
             if(!req.body.id){
                 try{
+                    delete req.body.id
                     await Usuario.create({ ...req.body })
                     res.redirect('/usuario/list')
                 }

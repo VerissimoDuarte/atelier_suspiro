@@ -8,18 +8,29 @@
     <title>Usuarios</title>
 </head>
 <body>
-    <section>
-        <form action="/login" method="post">
+    <header>
+        <div class="navbar navbar-light bg-light navbar-expand-lg">
+          <div class="container-fluid">
+            <a href="/" class="navbar-brand">Atelier</a>
+          </div>
+        </div>
+    </header>
+    <div>
+        <h1>Area privativa</h1>
+        <p>Favor informar usuario e senha</p>
+    </div>
+    <section class="m-4 d-grid ">
+        <form class="col-8" action="/login" method="post">
             <div>
-                <div>
-                    <label for="name">Nome: </label>
-                    <input type="text" name="name" id="name">
+                <div class="mb-3 input-group">
+                    <label class="input-group-text" for="name">Nome: </label>
+                    <input class="form-control" type="text" name="name" id="name">
                 </div>
-                <div>
-                    <label for="password">Senha: </label>
-                    <input type="password" name="password" id="password">
+                <div class="mb-3 input-group">
+                    <label class="input-group-text" for="password">Senha: </label>
+                    <input class="form-control" type="password" name="password" id="password">
                 </div>
-                <button type="submit">Login</button>
+                <button class="btn btn-primary" type="submit">Login</button>
             </div>
         </form>
     </section>

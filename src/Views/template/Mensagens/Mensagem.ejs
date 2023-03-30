@@ -9,23 +9,25 @@
 </head>
 <body>
     <%- include('app') %>
-    <section>
-        <form action="">
+    <section class="m-4 d-grid " >
+        <form class="col-8" >
             <div>
-                <p>Nome: <%= mensagens.name %></p>
-                <p>Email: <%= mensagens.email %></p>
-                <p>Telefone: <%= mensagens.telefone %></p>
+                <p class="input-group-text">Nome: <%= mensagens.name %></p>
+                <p class="input-group-text">Email: <%= mensagens.email %></p>
+                <p class="input-group-text">Telefone: <%= mensagens.telefone %></p>
             </div>
-            <div>
+            <div class="form-control row-10">
                 <p><%= mensagens.mensagem %></p>
             </div>
             <button type="submit"
                     formaction="/mensagem/list"
-                    formmethod="GET" > Retornar
+                    formmethod="GET" 
+                    class="btn btn-primary"> Retornar
             </button>
             <button type="submit"
                     formaction=<%= `/mensagem/d/${mensagens.id}` %>
-                    formmethod="GET" >Deletar
+                    formmethod="GET" 
+                    class="btn btn-danger">Deletar
             </button>
         </form>
     </section>
