@@ -8,12 +8,11 @@
     <title>Produtos</title>
 </head>
 <body>
-    <%- include('app') %>
-    <section class="m-4 d-grid ">
-        <form class="col-8" action="/mensagem" method="post" >
+    
+    <section class="m-4 row ">
+        <form class="col-6" action="/mensagem" method="post" >
             
-                <p><%=  msg %></p>
-                
+                                
                 <div class="mb-3 input-group">
                     <label class="input-group-text" for="name">Nome: </label>
                     <input class="form-control" type="text" name="name" id="name" >
@@ -33,6 +32,15 @@
                 <button class="btn btn-primary" type="submit">Enviar</button>
             
         </form>
+        <div class="card-text col-6">
+            <label class="col-form-label" for="telefone">Telefone:</label>
+            <p class="form-control-plaintext" name='telefone' id='telefone' >15 9966322-7847</p>
+
+            <label class="col-form-label" for="endereco">Endereço:</label>
+            <p class="form-control-plaintext" name='endereco' id='endereco' >Rua Manoel henrique, 45 - Central Parque - Sorocaba</p>
+      
+        </div>
+        
     </section>
 </body>
 </html>

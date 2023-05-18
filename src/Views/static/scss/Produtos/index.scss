@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import '../variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    
+}
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: $primary-color;
+    height: 10vh;
+   
+
+    &-logo{
+        display: flex;
+        color: $second-color;
+        margin: auto 30px;
+        align-items: center;
+        
+        p{
+            font-family: 'Pacifico', cursive;
+            font-size: 1.5em;
+        };
+
+    };
+    &-nav{
+        margin: auto 0;
+        .nav{
+            display: flex;
+            li{
+                list-style-type: none;
+
+                a{
+                    text-decoration: none;
+                    color: $second-color;
+                }
+            }
+
+            
+            
+        }
+        
+    };
+
+    &-resocial{
+        margin: auto 30px;
+        
+        .nav{
+            display: flex;
+            
+            li{
+                list-style-type: none;
+            }
+
+            a{
+                text-decoration: none;
+                color: $second-color;
+            }
+            
+        }
+    }
+    
+};
+
+.main{
+    background-color: $second-color;
+    display: flex;
+    flex-direction: column;
+
+    &-texto{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 40vh;
+        align-items: center;
+        border-bottom: solid $primary-color 10px;
+       
+        &-img{
+            width: auto;
+            height: auto;
+            margin-top: 10px;
+            max-height: 10vh;
+        };
+        &-descricao{
+            max-width: 50%;
+            margin-left: 30px;
+        }
+    };
+    &-produtos{
+        display: flex;
+        flex-direction: column;
+        padding-top: 5vh;
+        
+
+        h1{
+            // font-family: 'Pacifico', cursive;
+            align-self: center;
+            
+        }
+    }
+    &-contatos{
+        display: flex;
+        flex-direction: column;
+        border-top: solid $primary-color 10px;
+        
+        h1{
+            // font-family: 'Pacifico', cursive;
+            align-self: center;
+            
+        }
+    }
+
+   
+
+}
+
+.card{
+    &-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    &-title{
+        font-family: 'Pacifico', cursive;
+        font-size: 1.8em;
+    }
+
+    &-text{
+        font-family: 'Pacifico', cursive;
+        font-size: 1.4em;
+    }
+    
+}

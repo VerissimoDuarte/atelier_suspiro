@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: black;
+  height: 10vh;
+}
+.header-logo {
+  display: flex;
+  color: #f7ccf1;
+  margin: auto 30px;
+  align-items: center;
+}
+.header-logo p {
+  font-family: "Pacifico", cursive;
+  font-size: 1.5em;
+}
+.header-nav {
+  margin: auto 0;
+}
+.header-nav .nav {
+  display: flex;
+}
+.header-nav .nav li {
+  list-style-type: none;
+}
+.header-nav .nav li a {
+  text-decoration: none;
+  color: #f7ccf1;
+}
+.header-resocial {
+  margin: auto 30px;
+}
+.header-resocial .nav {
+  display: flex;
+}
+.header-resocial .nav li {
+  list-style-type: none;
+}
+.header-resocial .nav a {
+  text-decoration: none;
+  color: #f7ccf1;
+}
+
+.main {
+  background-color: #f7ccf1;
+  display: flex;
+  flex-direction: column;
+}
+.main-texto {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 40vh;
+  align-items: center;
+  border-bottom: solid black 10px;
+}
+.main-texto-img {
+  width: auto;
+  height: auto;
+  margin-top: 10px;
+  max-height: 10vh;
+}
+.main-texto-descricao {
+  max-width: 50%;
+  margin-left: 30px;
+}
+.main-produtos {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5vh;
+}
+.main-produtos h1 {
+  align-self: center;
+}
+.main-contatos {
+  display: flex;
+  flex-direction: column;
+  border-top: solid black 10px;
+}
+.main-contatos h1 {
+  align-self: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-title {
+  font-family: "Pacifico", cursive;
+  font-size: 1.8em;
+}
+.card-text {
+  font-family: "Pacifico", cursive;
+  font-size: 1.4em;
+}/*# sourceMappingURL=index.css.map */

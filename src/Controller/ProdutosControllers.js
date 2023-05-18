@@ -1,4 +1,7 @@
 const Produto = require('./../Models/Produtos')
+const path = require('path')
+const fs = require('fs')
+
 module.exports = {
     create: async (req, res) => {
         let msg = ''
@@ -12,8 +15,7 @@ module.exports = {
                 if(req.body.id){
                     const produto = await Produto.findByPk(req.body.id)
                     await produto.update({ ...req.body, img: `${req.file?'image/'+req.file.filename:produto.img}` })
-                    const produtos = await Produto.findAll()
-                    return res.render('ListaProdutos', { produtos })
+                    return res.render('/produtos/list')
                 }
                 else{
                     delete req.body.id
@@ -47,15 +49,14 @@ module.exports = {
         
     },
     delete: async (req, res) => {
-        
-        await Produto.destroy({where: {id: req.params['id']}})
-        const produtos = await Produto.findAll()
-        res.render('ListaProdutos', { produtos })
+        const produto = await Produto.findByPk(req.params['id'])
+        fs.unlink(path.resolve(__dirname ,`../Views/static/${produto.img}`), (error) => console.log(error))
+        await produto.destroy()
+        res.redirect('/produtos/list')
         
     },
     index: async (_, res) => {
-        const produtos = await Produto.findAll()
-        console.log(produtos)
-        res.render('index', { produtos })
+        //const produtos = await Produto.findAll()
+        return res.render('index', { produtos: await Produto.findAll() })
     }
 }

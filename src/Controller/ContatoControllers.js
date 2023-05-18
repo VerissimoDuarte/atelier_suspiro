@@ -4,7 +4,7 @@ module.exports = {
         let msg = ""
         if(req.method === 'GET'){
             const contato = await Contato.findByPk(1) || { ...req.body }
-            return res.render('Contato', { contato, msg: msg })
+            return res.render('Contato', { contato, msg: "" })
         }
         else if(req.method === 'POST'){
             try{
